@@ -8,3 +8,10 @@ A Python Script for editing & combining multiple combolists into a single file.
 * Saves the combined combos as a new .txt file
 
 ### Task List
+[ ] Email Sorting
+[ ] Remember where left-off if crash occurs
+[ ] Make a non-auth version
+
+## Auth
+Authentication available for Cracked.to users.
+(Scheduled for removal)
