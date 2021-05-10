@@ -4,16 +4,7 @@ from colorama import Fore
 import os
 from tqdm import tqdm
 
-#start of auth
-import requests
-import json
-import uuid
-from auth import ctoauth
-#end of auth
-
 os.system("cls" or "clear")
-
-ctoauth()#check for auth
 
 choice = 0
 combolist_path_list = []
