@@ -14,7 +14,6 @@ amt_combos = 0
 def select_combolists():
     Tk().withdraw()
     amt_combolist = 0
-    #setofCombos.clear()
     finished_loading_combolist = False
     while finished_loading_combolist == False:
         print(Fore.YELLOW + "How many combolists are you wanting to combine and filter?" + Fore.WHITE)
@@ -56,17 +55,14 @@ def combine_combolists():
         except FileNotFoundError:
             continue
 
-        for comboline in tqdm(loaded_combolist):#here's tqdm
+        for comboline in tqdm(loaded_combolist):
             try:
                 comboline_fixed = comboline.strip('\n')
-                #comboline_fixed.decode('utf-8', errors='ignore').encode('utf-8')
                 if comboline_fixed in setofCombos:
-                    #print(f'{comboline_fixed} is a duplicate!')
                     amt_duplicates = amt_duplicates + 1
                     pass
                 else:
                     setofCombos.add(comboline_fixed)
-                    #print(f'added: {comboline}')
                     amt_combos = amt_combos + 1
             except (UnicodeDecodeError, UnicodeError):
                 pass
@@ -78,13 +74,11 @@ def combine_combolists():
     print(f'{Fore.LIGHTMAGENTA_EX}---> {Fore.LIGHTCYAN_EX}{amt_combos}{Fore.LIGHTMAGENTA_EX} <--- new combos are in the updated combolist{Fore.WHITE}')
     
     return amt_combos
-    #print(setofCombos)
 
 def save_new_combolist(amt_combos):
     os.system("cls" or "clear")
-    filename = 'GothScript - ' + str(amt_combos) + ' combos - @ (Cracked.to)'
+    filename = 'GothScript - ' + str(amt_combos) + ' combos - @ (github.com/Beldurph)'
     print(f'{Fore.YELLOW}Saving: {Fore.LIGHTCYAN_EX}{amt_combos} {Fore.YELLOW}combos to file: {Fore.LIGHTCYAN_EX}{filename}.{Fore.WHITE}')
-    #print(f'{Fore.LIGHTGREEN_EX}Finished Saving: {Fore.LIGHTCYAN_EX}{amt_combos} {Fore.LIGHTGREEN_EX}combos to file: {Fore.LIGHTCYAN_EX}{filename}.{Fore.WHITE}')
     try:
         new_save_file = open(f'{filename}.txt', 'w+', encoding='UTF-8-sig')
         for line in setofCombos:
@@ -93,7 +87,6 @@ def save_new_combolist(amt_combos):
     except FileExistsError:
         print(Fore.RED + "Couldn't Save file." + Fore.WHITE)
         pass
-    #print(Fore.LIGHTGREEN_EX + "Finished saving." + Fore.WHITE)
 
 while choice != 4:
     text = f'\nLoaded Combolists: {len(combolist_path_list)}'
