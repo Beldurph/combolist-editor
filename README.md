@@ -12,7 +12,3 @@ A Python Script for editing & combining multiple combolists into a single file.
 - [x] Make a non-auth version
 - [ ] Email Sorting
 - [ ] Remember where left-off if crash occurs
-
-## Auth
-Authentication available for Cracked.to users.
-(Scheduled for removal)
