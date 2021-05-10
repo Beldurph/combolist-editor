@@ -9,9 +9,9 @@ A Python Script for editing & combining multiple combolists into a single file.
 
 ### Task List
 - [x] UTF-8 Support
+- [x] Make a non-auth version
 - [ ] Email Sorting
 - [ ] Remember where left-off if crash occurs
-- [ ] Make a non-auth version
 
 ## Auth
 Authentication available for Cracked.to users.
